@@ -1,4 +1,4 @@
-const calculate = require('./side-effects');
+const calculate = require('./no-side-effects');
 const readline = require('readline');
 
 var rl = readline.createInterface(process.stdin, process.stdout)
@@ -13,8 +13,9 @@ const getInput = () => {
         let output = (typeof ans === 'number') ? ans : 'error';
         console.log(`  :: ${output}`);
         getInput();
-      } catch {
+      } catch (error) {
         console.log('  :: error');
+        console.log(error);
         getInput();
       }
     }

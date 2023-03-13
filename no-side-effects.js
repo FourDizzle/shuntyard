@@ -2,7 +2,8 @@ const first = (arr) => arr[0];
 const tail = (arr) => arr.slice(1);
 const peek = (arr) => arr[0];
 
-const isOp = (x) => (['-', '+', '/', '*']).includes(x);
+const ops = ['-', '+', '/', '*'];
+const isOp = (x) => ops.includes(x);
 const isNumber = (x) => (typeof (x) === 'number');
 const isEmpty = (x) => x.length === 0;
 const isString = (x) => (typeof (x) === 'string');
